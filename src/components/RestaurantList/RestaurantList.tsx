@@ -1,10 +1,10 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { RootState } from '../../store/type'
-import { Restaurant, RestaurantListContainer } from './RestaurantList.styles'
+import React from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/type";
+import { Restaurant, RestaurantListContainer } from "./RestaurantList.styles";
 
 const RestaurantList: React.FC = () => {
-  const restaurants = useSelector((state: RootState) => state.restaurants)
+  const restaurants = useSelector((state: RootState) => state.restaurants);
 
   return (
     <RestaurantListContainer>
@@ -16,7 +16,7 @@ const RestaurantList: React.FC = () => {
         </Restaurant>
       ))}
     </RestaurantListContainer>
-  )
-}
+  );
+};
 
-export default RestaurantList
+export default RestaurantList;

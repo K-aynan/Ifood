@@ -1,40 +1,11 @@
-import { Dispatch } from 'redux';
-import { RootState } from '../type';
-
-export const SET_USER_NAME = 'SET_USER_NAME';
-export const SET_SELECTED_RESTAURANT = 'SET_SELECTED_RESTAURANT';
-
-interface SetUserNameAction {
-  type: typeof SET_USER_NAME;
-  payload: string;
-}
-
-interface SetSelectedRestaurantAction {
-  type: typeof SET_SELECTED_RESTAURANT;
-  payload: number;
-}
-
-export const setUserName = (name: string): SetUserNameAction => ({
-  type: SET_USER_NAME,
-  payload: name,
-});
-
-export const setSelectedRestaurant = (id: number): SetSelectedRestaurantAction => ({
-  type: SET_SELECTED_RESTAURANT,
-  payload: id,
-});
-
-export const fetchUserData = () => async (dispatch: Dispatch, getState: () => RootState) => {
-  const response = await fetch('https://api.example.com/user');
-  const data = await response.json();
-
-  dispatch(setUserName(data.name));
-};
-
-export type ActionTypes = SetUserNameAction | SetSelectedRestaurantAction;
+import { UserActionTypes, SET_USER_NAME } from './userActions';
+import { RestaurantActionTypes, SET_SELECTED_RESTAURANT } from './restaurantActions';
+import { FETCH_USER_DATA } from './userDataActions';
 
 export {
-  setUserName,
-  setSelectedRestaurant,
-  fetchUserData,
+  SET_USER_NAME,
+  SET_SELECTED_RESTAURANT,
+  FETCH_USER_DATA,
 };
+
+export type { UserActionTypes, RestaurantActionTypes };

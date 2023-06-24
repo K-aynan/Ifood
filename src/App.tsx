@@ -1,10 +1,10 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { Provider } from 'react-redux'
-import store from './store/store'
-import { GlobalStyle } from './styles/GlobalStyle'
-import Home from './pages/Home/Home'
-import Restaurant from './pages/Restaurant/Restaurant'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store/store";
+import { GlobalStyle } from "./styles/GlobalStyle";
+import Home from "./pages/Home/Home";
+import Restaurant from "./pages/Restaurant/Restaurant";
 
 const App: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const App: React.FC = () => {
         </Routes>
       </Router>
     </Provider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

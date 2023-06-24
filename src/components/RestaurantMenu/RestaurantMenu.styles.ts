@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const RestaurantMenuContainer = styled.div`
   h2 {
@@ -28,5 +28,13 @@ export const MenuItem = styled.li`
 
   span {
     font-weight: bold;
+  }
+
+  button {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
   }
 `;

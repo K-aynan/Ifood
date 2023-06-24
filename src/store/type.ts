@@ -1,5 +1,6 @@
 export interface UserState {
   name: string;
+  restaurantId: number;
 }
 
 export interface Restaurant {
@@ -19,9 +20,6 @@ export interface MenuItem {
 }
 
 export type MenuItemState = MenuItem[];
-
-// Define outras interfaces e tipos relacionados às ações do Redux
-// Exemplo: UserActionTypes, RestaurantActionTypes, etc.
 
 export interface RootState {
   user: UserState;
