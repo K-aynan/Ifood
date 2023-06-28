@@ -1,15 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/type";
-import { HeaderContainer } from "./Header.styles";
+import { HeaderContainer, Logo, Navigation } from "./Header.styles";
 
-const Header: React.FC = () => {
+const Header = () => {
   const user = useSelector((state: RootState) => state.user);
 
   return (
     <HeaderContainer>
-      <h1>Welcome, {user.name}</h1>
-      <p>Restaurant ID: {user.restaurantId}</p>{" "}
+      <Logo>
+        <Link to="/">Food App</Link>
+      </Logo>
+      <Navigation>
+        <Link to="/">Home</Link>
+        <Link to={`/restaurant/${user.restaurantId}`}>Restaurant</Link>
+      </Navigation>
     </HeaderContainer>
   );
 };

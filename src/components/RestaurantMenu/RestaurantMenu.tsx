@@ -6,6 +6,10 @@ import { MenuItem, RestaurantMenuContainer } from "./RestaurantMenu.styles";
 const RestaurantMenu: React.FC = () => {
   const menuItems = useSelector((state: RootState) => state.menuItems);
 
+  if (!Array.isArray(menuItems)) {
+    return <p>No menu items found.</p>;
+  }
+
   return (
     <RestaurantMenuContainer>
       <h2>Menu</h2>

@@ -6,6 +6,10 @@ import { Restaurant, RestaurantListContainer } from "./RestaurantList.styles";
 const RestaurantList: React.FC = () => {
   const restaurants = useSelector((state: RootState) => state.restaurants);
 
+  if (!Array.isArray(restaurants)) {
+    return <p>No restaurants found.</p>;
+  }
+
   return (
     <RestaurantListContainer>
       {restaurants.map((restaurant) => (

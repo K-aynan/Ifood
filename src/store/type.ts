@@ -26,3 +26,12 @@ export interface RootState {
   restaurants: RestaurantState;
   menuItems: MenuItemState;
 }
+
+export const FETCH_USER_DATA = "FETCH_USER_DATA";
+
+export interface FetchUserDataAction {
+  type: typeof FETCH_USER_DATA;
+  payload: UserState;
+}
+
+export type UserDataActionTypes = FetchUserDataAction;

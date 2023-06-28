@@ -1,12 +1,11 @@
-import { UserState } from "../type";
-import { UserDataActionTypes, FETCH_USER_DATA } from '../actions/userDataActions';
+import { UserState, FETCH_USER_DATA, UserDataActionTypes } from "../type";
 
 const initialState: UserState = {
   name: "",
   restaurantId: 0,
 };
 
-const userReducer = (state = initialState,action: UserDataActionTypes): UserState => {
+const userReducer = (state = initialState, action: UserDataActionTypes) => {
   switch (action.type) {
     case FETCH_USER_DATA:
       return {
