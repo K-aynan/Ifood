@@ -6,18 +6,10 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import Home from "./pages/Home/Home";
 import Restaurant from "./pages/Restaurant/Restaurant";
 import Modal from "./components/Modal/Modal";
-
-interface Product {
-  capa: string | undefined;
-  cardapio: any;
-  id: string;
-  nome: string;
-  descricao: string;
-  preco: number;
-}
+import { Product } from "./store/type";
 
 const App: React.FC = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [modalContent, setModalContent] = useState<React.ReactNode>(null);
   const [data, setData] = useState<Product[]>([]);
 

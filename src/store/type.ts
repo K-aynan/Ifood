@@ -1,37 +1,31 @@
+export interface Product {
+  capa: string | undefined;
+  cardapio: [];
+  id: string;
+  nome: string;
+  descricao: string;
+  preco: number;
+}
+
+export interface CartItem {
+  product: Product;
+  quantity: number;
+}
+
+export interface CartState {
+  items: CartItem[];
+}
+
 export interface UserState {
-  name: string;
-  restaurantId: number;
-}
-
-export interface Restaurant {
   id: number;
   name: string;
-  description: string;
-  image: string;
+  email: string;
+  avatar: string;
+  permissions: string[];
+  authenticated: boolean;
 }
-
-export type RestaurantState = Restaurant[];
-
-export interface MenuItem {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-}
-
-export type MenuItemState = MenuItem[];
 
 export interface RootState {
+  cart: CartState;
   user: UserState;
-  restaurants: RestaurantState;
-  menuItems: MenuItemState;
 }
-
-export const FETCH_USER_DATA = "FETCH_USER_DATA";
-
-export interface FetchUserDataAction {
-  type: typeof FETCH_USER_DATA;
-  payload: UserState;
-}
-
-export type UserDataActionTypes = FetchUserDataAction;
