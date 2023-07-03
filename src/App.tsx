@@ -31,9 +31,9 @@ const App: React.FC = () => {
     setModalOpen(true);
     setModalContent(
       <div>
-        <h2>{product.nome}</h2>
+        <h2>{product.name}</h2>
         <p>{product.descricao}</p>
-        <p>Price: ${product.preco}</p>
+        <p>Price: ${product.price}</p>
       </div>
     );
   };
@@ -53,14 +53,14 @@ const App: React.FC = () => {
         </Routes>
         {data.map((restaurant) => (
           <div key={restaurant.id}>
-            <h2>{restaurant.nome}</h2>
+            <h2>{restaurant.name}</h2>
             <p>{restaurant.descricao}</p>
-            <img src={restaurant.capa} alt={restaurant.nome} />
+            <img src={restaurant.capa} alt={restaurant.name} />
             {restaurant.cardapio.map((product: Product) => (
               <div key={product.id}>
-                <h3>{product.nome}</h3>
+                <h3>{product.name}</h3>
                 <p>{product.descricao}</p>
-                <p>Price: ${product.preco}</p>
+                <p>Price: ${product.price}</p>
                 <button onClick={() => handleBuyButtonClick(product)}>
                   Buy
                 </button>

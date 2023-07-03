@@ -19,10 +19,10 @@ export interface RootState {
 export interface Product {
   capa: string | undefined;
   cardapio: [];
-  id: string;
-  nome: string;
+  id: number;
   descricao: string;
-  preco: number;
+  name: string;
+  price: number;
 }
 
 export interface CartItem {

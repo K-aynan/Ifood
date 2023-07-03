@@ -3,15 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState, CartItem } from "../store/type";
 import { removeFromCart, updateCartItemQuantity } from "../store/cartActions";
 
-interface CartItem {
-  product: {
-    id: number;
-    name: string;
-    price: number;
-  };
-  quantity: number;
-}
-
 const Cart: React.FC = () => {
   const cartItems = useSelector<RootState, CartItem[]>(
     (state) => state.cart.items

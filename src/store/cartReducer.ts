@@ -11,13 +11,13 @@ interface AddToCartAction {
 
 interface RemoveFromCartAction {
   type: "REMOVE_FROM_CART";
-  payload: string;
+  payload: number;
 }
 
 interface UpdateCartItemQuantityAction {
   type: "UPDATE_CART_ITEM_QUANTITY";
   payload: {
-    productId: string;
+    productId: number;
     quantity: number;
   };
 }
