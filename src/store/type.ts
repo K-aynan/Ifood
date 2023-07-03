@@ -12,10 +12,6 @@ export interface MenuItem {
   price: number;
 }
 
-export interface RootState {
-  restaurants: number | string;
-  menuItems: MenuItem[];
-}
 export interface Product {
   capa: string | undefined;
   cardapio: [];
@@ -45,6 +41,8 @@ export interface UserState {
 }
 
 export interface RootState {
+  restaurants: Restaurant[];
+  menuItems: MenuItem[];
   cart: CartState;
   user: UserState;
 }
