@@ -1,8 +1,23 @@
-import { UserState, FETCH_USER_DATA, UserDataActionTypes } from "../type";
+import { UserState } from "../type";
+
+export const FETCH_USER_DATA = "FETCH_USER_DATA";
+
+export interface UserDataActionTypes {
+  type: typeof FETCH_USER_DATA;
+  payload: {
+    name: string;
+    restaurantId: number;
+  };
+}
 
 const initialState: UserState = {
   name: "",
   restaurantId: 0,
+  id: 0,
+  email: "",
+  avatar: "",
+  permissions: [],
+  authenticated: false,
 };
 
 const userReducer = (state = initialState, action: UserDataActionTypes) => {

@@ -1,6 +1,6 @@
-import { MenuItem } from '../type';
+import { MenuItem } from "../type";
 
-let menuItems: MenuItem[] = [];
+const menuItems: MenuItem[] = [];
 
 export const fetchMenuItems = () => {
   return new Promise<MenuItem[]>((resolve) => {
@@ -23,7 +23,7 @@ export const removeMenuItem = (id: number) => {
       menuItems.splice(index, 1);
       resolve();
     } else {
-      reject(new Error('Item not found'));
+      reject(new Error("Item not found"));
     }
   });
 };

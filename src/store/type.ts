@@ -1,3 +1,21 @@
+export interface Restaurant {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+}
+
+export interface MenuItem {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+}
+
+export interface RootState {
+  restaurants: number | string;
+  menuItems: MenuItem[];
+}
 export interface Product {
   capa: string | undefined;
   cardapio: [];
@@ -23,9 +41,12 @@ export interface UserState {
   avatar: string;
   permissions: string[];
   authenticated: boolean;
+  restaurantId: number;
 }
 
 export interface RootState {
   cart: CartState;
   user: UserState;
 }
+
+export type RestaurantState = Restaurant[];

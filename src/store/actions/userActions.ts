@@ -1,4 +1,4 @@
-export const SET_USER_NAME = 'SET_USER_NAME';
+export const SET_USER_NAME = "SET_USER_NAME";
 
 export interface SetUserNameAction {
   type: typeof SET_USER_NAME;

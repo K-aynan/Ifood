@@ -14,26 +14,26 @@ const initialState: RestaurantState = [
   },
   {
     id: 2,
-    name: "Restaurant 2",
-    description: "This is the second restaurant",
+    name: "Restaurant 1",
+    description: "This is the first restaurant",
     image: images2,
   },
   {
     id: 3,
-    name: "Restaurant 2",
-    description: "This is the second restaurant",
+    name: "Restaurant 1",
+    description: "This is the first restaurant",
     image: images3,
   },
   {
     id: 4,
-    name: "Restaurant 2",
-    description: "This is the second restaurant",
+    name: "Restaurant 1",
+    description: "This is the first restaurant",
     image: images4,
   },
 ];
 
 const restaurantReducer = (
-  state = initialState,
+  state: RestaurantState = initialState,
   action: RestaurantActionTypes
 ): RestaurantState => {
   switch (action.type) {
