@@ -7,7 +7,6 @@ export const HeaderContainer = styled.header`
   background-image: url(${bg});
   background-size: cover;
   background-repeat: no-repeat;
-  height: 384px;
   padding: 40px;
   display: flex;
   flex-direction: column;

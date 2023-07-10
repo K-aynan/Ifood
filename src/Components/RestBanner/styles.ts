@@ -31,6 +31,7 @@ export const BannerDiv = styled.div`
 `
 
 export const Category = styled.span`
+  font-family: Roboto;
   font-weight: 100;
   font-size: 32px;
   line-height: 38px;
