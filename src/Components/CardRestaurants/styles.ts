@@ -39,6 +39,7 @@ export const CardContainer = styled.div`
   padding: 8px;
   border: 1px solid ${colors.rose};
   border-top: none;
+  background-color: ${colors.white}
 `;
 
 export const TitleContainer = styled.div`
